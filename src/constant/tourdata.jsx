@@ -429,7 +429,7 @@ export const pricingPackages = [
     image: "https://plus.unsplash.com/premium_photo-1697730182658-8f469cafff71?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     tripType: "City Escape",
     title: "European Adventure",
-    price: 850,
+    price: "$850",
     duration: "5 Days / 4 Nights",
     description:
       "Explore iconic European cities, experience local culture, and enjoy a carefully planned getaway.",
@@ -447,7 +447,7 @@ export const pricingPackages = [
     image: "https://images.unsplash.com/photo-1705672354908-a068661bc81d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     tripType: "Beach Getaway",
     title: "Tropical Paradise",
-    price: 1200,
+    price: "$1200",
     duration: "7 Days / 6 Nights",
     description:
       "Relax on beautiful beaches and enjoy a peaceful tropical escape with everything planned for you.",
@@ -465,7 +465,7 @@ export const pricingPackages = [
     image: "https://images.unsplash.com/photo-1634664375986-f327f01154e5?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     tripType: "Luxury Escape",
     title: "Dubai Experience",
-    price: 1500,
+    price: "$1500",
     duration: "6 Days / 5 Nights",
     description:
       "Experience Dubai's luxury, entertainment, breathtaking architecture, and unforgettable adventures.",
@@ -491,7 +491,7 @@ export const holidayPackages = [
   title: "Dubai City Escape",
   destination: "Dubai, UAE",
   duration: "5 Days / 4 Nights",
-  price: 780000,
+  price: "$7800",
   image: dubai1,
   includes: [
     "Return flight",
@@ -509,7 +509,7 @@ export const holidayPackages = [
   title: "Dubai Luxury Retreat",
   destination: "Dubai, UAE",
   duration: "7 Days / 6 Nights",
-  price: 1200000,
+  price: "$1200",
   image: dubai2,
   includes: [
     "Return flight",
@@ -527,7 +527,7 @@ export const holidayPackages = [
   title: "Dubai Adventure Getaway",
   destination: "Dubai, UAE",
   duration: "6 Days / 5 Nights",
-  price: 900000,
+  price: "$900",
   image: dubai1,
   includes: [
     "Return flight",
@@ -545,7 +545,7 @@ export const holidayPackages = [
   title: "Dubai Romantic Escape",
   destination: "Dubai, UAE",
   duration: "5 Days / 4 Nights",
-  price: 980000,
+  price: "$9800",
   image: dubai2,
   includes: [
     "Return flight",
@@ -563,7 +563,7 @@ export const holidayPackages = [
   title: "Zanzibar Beach Escape",
   destination: "Zanzibar, Tanzania",
   duration: "5 Days / 4 Nights",
-  price: 650000,
+  price: "$6500",
   image: Zanzibar,
   includes: [
     "Return flight",
@@ -581,7 +581,7 @@ export const holidayPackages = [
   title: "Zanzibar Luxury Retreat",
   destination: "Zanzibar, Tanzania",
   duration: "7 Days / 6 Nights",
-  price: 980000,
+  price: "$980",
   image: Zanzibar,
   includes: [
     "Return flight",
@@ -599,7 +599,7 @@ export const holidayPackages = [
   title: "Zanzibar Adventure Getaway",
   destination: "Zanzibar, Tanzania",
   duration: "6 Days / 5 Nights",
-  price: 780000,
+  price: "$7800",
   image: Zanzibar,
   includes: [
     "Return flight",
@@ -617,7 +617,7 @@ export const holidayPackages = [
   title: "Zanzibar Romantic Escape",
   destination: "Zanzibar, Tanzania",
   duration: "5 Days / 4 Nights",
-  price: 850000,
+  price: "$8500",
   image: Zanzibar,
   includes: [
     "Return flight",
@@ -635,7 +635,7 @@ export const holidayPackages = [
   title: "Cape Town City Escape",
   destination: "Cape Town, South Africa",
   duration: "5 Days / 4 Nights",
-  price: 620000,
+  price: "$6200",
   image: CapeTown,
   includes: [
     "Return flight",
@@ -653,7 +653,7 @@ export const holidayPackages = [
   title: "Cape Town Luxury Retreat",
   destination: "Cape Town, South Africa",
   duration: "7 Days / 6 Nights",
-  price: 950000,
+  price: "$9500",
   image: CapeTown,
   includes: [
     "Return flight",
@@ -671,7 +671,7 @@ export const holidayPackages = [
   title: "Cape Town Adventure",
   destination: "Cape Town, South Africa",
   duration: "6 Days / 5 Nights",
-  price: 760000,
+  price: "$7600",
   image: CapeTown,
   includes: [
     "Return flight",
@@ -689,7 +689,7 @@ export const holidayPackages = [
   title: "Cape Town Romantic Getaway",
   destination: "Cape Town, South Africa",
   duration: "5 Days / 4 Nights",
-  price: 820000,
+  price: "$8200",
   image: CapeTown,
   includes: [
     "Return flight",
@@ -743,7 +743,7 @@ export const holidayPackages = [
   title: "Paris Culture & History",
   destination: "Paris, France",
   duration: "6 Days / 5 Nights",
-  price: 1100000,
+  price: "$1100",
   image: Paris,
   category: "Culture",
   includes: [
@@ -761,7 +761,7 @@ export const holidayPackages = [
   title: "Paris Weekend Getaway",
   destination: "Paris, France",
   duration: "4 Days / 3 Nights",
-  price: 780000,
+  price: "$7800",
   image: Paris,
   category: "Weekend",
   includes: [
