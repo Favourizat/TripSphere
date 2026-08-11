@@ -57,7 +57,7 @@ const TourCard = ({ tour }) => {
                     <div className="mt-6 flex items-center justify-between">
                         <div>
                             <h4 className="text-2xl font-bold text-blue-600">
-                                ${price}
+                                {price}
                                 <span className="text-gray-500 text-sm">
                                     / per person
                                 </span>

@@ -707,7 +707,7 @@ export const holidayPackages = [
   title: "Paris Romantic Escape",
   destination: "Paris, France",
   duration: "5 Days / 4 Nights",
-  price: 950000,
+  price: "$9500",
   image: Paris,
   category: "Romantic",
   includes: [
@@ -725,7 +725,7 @@ export const holidayPackages = [
   title: "Paris Luxury Experience",
   destination: "Paris, France",
   duration: "7 Days / 6 Nights",
-  price: 1350000,
+  price: "$1350",
   image: Paris,
   category: "Luxury",
   includes: [
@@ -885,7 +885,7 @@ export const hotelData = [
             "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop",
         rating: 4.8,
         reviews: 324,
-        price: 120,
+        price: "$120",
         amenities: ["Free WiFi", "Breakfast", "Swimming Pool"],
         description:
             "A beautiful luxury hotel located in the heart of Paris, close to major attractions.",
@@ -899,7 +899,7 @@ export const hotelData = [
             "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=1200&auto=format&fit=crop",
         rating: 4.9,
         reviews: 287,
-        price: 180,
+        price: "$180",
         amenities: ["Free WiFi", "Sea View", "Breakfast"],
         description:
             "Enjoy breathtaking views of the Aegean Sea from this luxurious Santorini resort.",
@@ -913,7 +913,7 @@ export const hotelData = [
             "https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1200&auto=format&fit=crop",
         rating: 4.7,
         reviews: 456,
-        price: 150,
+        price: "$150",
         amenities: ["Free WiFi", "Gym", "Swimming Pool"],
         description:
             "Modern luxury suites offering premium comfort in the heart of Dubai.",
@@ -927,7 +927,7 @@ export const hotelData = [
             "https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1200&auto=format&fit=crop",
         rating: 4.8,
         reviews: 392,
-        price: 95,
+        price: "$95",
         amenities: ["Free WiFi", "Spa", "Breakfast"],
         description:
             "Relax in a peaceful tropical resort surrounded by nature and beautiful scenery.",
@@ -941,7 +941,7 @@ export const hotelData = [
             "https://images.unsplash.com/photo-1522083165195-3424ed129620?q=80&w=1200&auto=format&fit=crop",
         rating: 4.6,
         reviews: 521,
-        price: 210,
+        price: "$210",
         amenities: ["Free WiFi", "Gym", "Restaurant"],
         description:
             "A stylish city hotel located close to Manhattan's top attractions.",
@@ -955,7 +955,7 @@ export const hotelData = [
             "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=1200&auto=format&fit=crop",
         rating: 5.0,
         reviews: 198,
-        price: 280,
+        price: "$280",
         amenities: ["Sea View", "Spa", "Breakfast"],
         description:
             "Experience an unforgettable island getaway in a private oceanfront resort.",
@@ -984,7 +984,7 @@ export const flightData = [
 
         stops: "Direct",
 
-        price: 850,
+        price: "$850",
 
         class: "Economy",
 
@@ -1012,7 +1012,7 @@ export const flightData = [
 
         stops: "Direct",
 
-        price: 780,
+        price: "$780",
 
         class: "Economy",
 
@@ -1040,7 +1040,7 @@ export const flightData = [
 
         stops: "Direct",
 
-        price: 920,
+        price: "$920",
 
         class: "Economy",
 
@@ -1068,7 +1068,7 @@ export const flightData = [
 
         stops: "Direct",
 
-        price: 720,
+        price: "$720",
 
         class: "Economy",
 
@@ -1096,7 +1096,7 @@ export const flightData = [
 
         stops: "Direct",
 
-        price: 560,
+        price: "$560",
 
         class: "Economy",
 
@@ -1124,7 +1124,7 @@ export const flightData = [
 
         stops: "1 Stop",
 
-        price: 980,
+        price: "$980",
 
         class: "Economy",
 

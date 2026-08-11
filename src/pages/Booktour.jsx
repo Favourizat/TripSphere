@@ -310,7 +310,7 @@ const Booktour = () => {
                   </span>
 
                   <span className="font-semibold">
-                    ${tourData.price.toLocaleString()}
+                    {tourData.price.toLocaleString()}
                   </span>
                 </div>
 

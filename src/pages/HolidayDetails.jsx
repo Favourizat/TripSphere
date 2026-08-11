@@ -154,7 +154,7 @@ const HolidayDetails = () => {
             </p>
 
             <p className="mt-1 text-3xl font-bold text-blue-600">
-              ₦{holiday.price.toLocaleString()}
+              {holiday.price.toLocaleString()}
             </p>
 
             <p className="mt-2 text-sm text-gray-500">

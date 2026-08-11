@@ -218,7 +218,7 @@ const Hotels = () => {
                                 </h3>
 
                                 <span className="text-blue-600 font-semibold">
-                                    ${maxPrice}
+                                    {maxPrice}
                                 </span>
 
                             </div>

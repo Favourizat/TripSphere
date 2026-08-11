@@ -115,7 +115,7 @@ const FlightDetails = () => {
                             </p>
 
                             <p className="text-3xl font-bold text-blue-600">
-                                ${flight.price}
+                                {flight.price}
                             </p>
 
                             <p className="text-sm text-gray-500">
@@ -331,7 +331,7 @@ const FlightDetails = () => {
                             </p>
 
                             <p className="text-3xl font-bold text-gray-900">
-                                ${flight.price}
+                                {flight.price}
                             </p>
 
                             <p className="text-sm text-gray-500">

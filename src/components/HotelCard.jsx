@@ -73,7 +73,7 @@ const HotelCard = ({ hotel }) => {
 
                     <div>
                         <span className="text-2xl font-bold text-gray-900">
-                            ${hotel.price}
+                            {hotel.price}
                         </span>
 
                         <span className="text-sm text-gray-500">

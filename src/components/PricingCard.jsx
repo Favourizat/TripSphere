@@ -29,7 +29,7 @@ const PricingCard = ({ pricing }) => {
                 </span>
                 {/* TripType Badge */}
                 <span className="text-black pt-5 pl-7 text-3xl font-bold px-4 py-2 rounded-full">
-                    ${price}
+                    {price}
                 </span>
             </div>
 

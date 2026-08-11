@@ -131,7 +131,7 @@ const Holiday = () => {
                                     </p>
 
                                     <p className="text-lg font-bold text-blue-600">
-                                        ${holiday.price.toLocaleString()}
+                                        {holiday.price.toLocaleString()}
                                     </p>
                                 </div>
                             </div>

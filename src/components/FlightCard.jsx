@@ -143,7 +143,7 @@ const FlightCard = ({ flight }) => {
                     </p>
 
                     <p className="text-2xl font-bold text-blue-600">
-                        ${flight.price}
+                        {flight.price}
                     </p>
 
                     <p className="text-xs text-gray-500">
