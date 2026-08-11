@@ -483,7 +483,7 @@ import dubai1 from "../assets/dubai1.avif";
 import dubai2 from "../assets/dubai2.avif";
 import Zanzibar from "../assets/Zanzibar.avif";
 import Paris from "../assets/Paris.avif";
-import CapeTown from "../assets/CapeTown.avif";
+import CapeTown from "../assets/Capetown.avif";
 
 export const holidayPackages = [
  {
