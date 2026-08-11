@@ -7,7 +7,7 @@ import {
     ArrowRightLeft,
 } from "lucide-react";
 
-import { flightData } from "../constant/tourData";
+import { flightData } from "../constant/tourdata";
 import FlightCard from "../components/FlightCard";
 
 const Flights = () => {
