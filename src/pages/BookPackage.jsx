@@ -314,7 +314,7 @@ console.log("Public Key:", import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
                   </span>
 
                   <span className="font-semibold">
-                    ₦{packageData.price.toLocaleString()}
+                    ${packageData.price.toLocaleString()}
                   </span>
                 </div>
 
