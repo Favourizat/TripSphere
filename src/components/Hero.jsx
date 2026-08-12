@@ -5,6 +5,7 @@ import Lexus from "../assets/Lexus.jpg"
 import Mini from "../assets/Mini.jpg"
 import Nissan from "../assets/Nissan.jpg"
 import Audi from "../assets/Audi.jpg"
+import Hero3 from "../assets/Hero3.avif"
 
 const Hero = () => {
   return (
@@ -13,7 +14,7 @@ const Hero = () => {
       <div className="absolute inset-4 sm:inset-6 lg:inset-8">
         <div className="relative h-full w-full overflow-hidden rounded-3xl shadow-2xl">
           <img
-            src={HeroImg2}
+            src={Hero3}
             alt="Hero"
             className="h-full w-full object-cover"
           />
@@ -29,7 +30,7 @@ const Hero = () => {
           <div className="max-w-3xl text-center lg:text-left">
             {/* Heading */}
             <h1
-              className="font-['Playfair_Display'] text-4xl font-bold leading-tight text-slate-900 sm:text-5xl lg:text-7xl"
+              className="font-['Playfair_Display'] text-4xl font-bold leading-tight text-gray-100 sm:text-5xl lg:text-7xl"
               data-aos="fade-right"
             >
               Experience
@@ -41,7 +42,7 @@ const Hero = () => {
 
             {/* Description */}
             <p
-              className="mx-auto mt-6 max-w-2xl text-base leading-8 text-gray-700 sm:text-lg lg:mx-0 lg:text-xl"
+              className="mx-auto mt-6 max-w-2xl text-base leading-8 text-white sm:text-lg lg:mx-0 lg:text-xl"
               data-aos="fade-right"
               data-aos-delay="200"
             >
@@ -57,11 +58,11 @@ const Hero = () => {
               data-aos="fade-right"
               data-aos-delay="400"
             >
-              <h2 className="text-5xl font-bold text-blue-600 lg:text-7xl">
+              <h2 className="text-5xl font-bold text-white lg:text-7xl">
                 22+
               </h2>
 
-              <div className="text-left text-gray-700">
+              <div className="text-left text-white">
                 <p className="text-lg font-semibold">Years of</p>
                 <p className="text-lg">Experience</p>
               </div>

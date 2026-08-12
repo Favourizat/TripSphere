@@ -72,7 +72,7 @@ const HolidayCard = ({ holiday }) => {
                         </p>
 
                         <p className="text-xl font-bold text-blue-600">
-                            ${Number(holiday.price).toLocaleString()}
+                            {Number(holiday.price).toLocaleString()}
                         </p>
                     </div>
 
