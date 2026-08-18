@@ -23,7 +23,7 @@ import Flights from "./pages/Flights";
 import FlightDetails from "./pages/FlightDetails";
 import HolidaySearch from "./pages/HolidaySearch";
 import HolidaySearchDetails from "./pages/HolidaySearchDetails";
-import BookTour from "./pages/BookTour"
+import Bookt from "./pages/Bookt"
 import BookHoliday from "./pages/BookHoliday";
 
 function App() {
@@ -60,7 +60,7 @@ function App() {
 
         <Route
           path="/book-tour/:id"
-          element={<BookTour />}
+          element={<Bookt />}
         />
 
         <Route
