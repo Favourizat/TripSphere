@@ -59,7 +59,7 @@ const BookingSummary = ({ item }) => {
                             </span>
 
                             <span className="font-semibold text-blue-600">
-                                ₦{Number(item.price).toLocaleString()}
+                                {(item.price).toLocaleString()}
                             </span>
                         </div>
                     )}

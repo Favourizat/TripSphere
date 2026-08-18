@@ -1,6 +1,6 @@
 import CoreServices from "../components/Services/CoreServices";
-// import Holiday from "../components/Services/Holiday";
-// import PopularTourList from "../components/Services/PopularTourList";
+import Holiday from "../components/Services/Holiday";
+import PopularTourList from "../components/Services/PopularTourList";
 
 
 const Services = () => {
@@ -8,8 +8,8 @@ const Services = () => {
         <div>
             <div>
                 <CoreServices />
-                {/* <Holiday />
-                <PopularTourList /> */}
+                <Holiday />
+                <PopularTourList />
 
                 
 
