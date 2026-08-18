@@ -8,7 +8,6 @@ import HolidayImage from "../assets/HolidayImage.avif";
 export const services = [
   {
     image: FlightImage,
-    icon: FaPlane,
     title: "Flight Booking",
     description:
       "Find and compare flights from different destinations and choose the option that works best for your journey.",
@@ -23,7 +22,6 @@ export const services = [
 
   {
     image: HotelImage,
-    icon: FaHotel,
     title: "Hotel Booking",
     description:
       "Discover comfortable stays that match your destination, budget, and travel preferences.",
@@ -38,7 +36,6 @@ export const services = [
 
   {
     image: TrainImage,
-    icon: FaBus,
     title: "Bus & Train",
     description:
       "Find convenient and affordable transportation options for journeys within and between destinations.",
@@ -53,7 +50,6 @@ export const services = [
 
   {
     image: HolidayImage,
-    icon: FaUmbrellaBeach,
     title: "Holiday Packages",
     description:
       "Discover unforgettable holiday experiences tailored to your destination, budget, and travel style.",
