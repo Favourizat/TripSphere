@@ -3,40 +3,39 @@ import { MdAutoAwesome, MdOutlinePayments } from "react-icons/md";
 
 const How = () => {
   return (
-    <section className="py-15 px-6 md:px-12 lg:px-20 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-white px-4 py-14 sm:px-6 sm:py-16 md:px-12 md:py-20 lg:px-20">
+      <div className="mx-auto max-w-7xl">
 
         {/* Heading */}
-        <div className="text-center max-w-2xl mx-auto mb-20">
-          <p className="text-blue-400 uppercase tracking-widest text-sm font-semibold mb-3">
+        <div className="mx-auto mb-12 max-w-2xl text-center sm:mb-16 md:mb-20">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-blue-400 sm:text-sm">
             Simple & Seamless
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+          <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl md:text-5xl">
             How TripSphere Works
           </h2>
 
-          <p className="mt-5 text-gray-600 text-lg leading-8">
+          <p className="mt-4 text-base leading-7 text-gray-600 sm:mt-5 sm:text-lg sm:leading-8">
             From discovering your destination to enjoying your journey,
             TripSphere makes every step simple, secure, and stress-free.
           </p>
         </div>
 
         {/* W Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 items-start">
+        <div className="grid grid-cols-1 gap-10 sm:gap-12 md:grid-cols-4 md:gap-6 lg:gap-8">
 
           {/* 01 */}
           <div className="group">
             <FaGlobeAfrica
-              size={70}
-              className="text-blue-400 rounded-full bg-blue-200 px-4 py-4 mb-5 group-hover:translate-x-2 transition-transform duration-300"
+              className="mb-5 rounded-full bg-blue-200 p-4 text-[68px] text-blue-400 transition-transform duration-300 group-hover:translate-x-2 sm:text-[72px]"
             />
 
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
+            <h3 className="mb-3 text-lg font-bold leading-7 text-gray-900 sm:text-xl">
               01. Discover Your Journey
             </h3>
 
-            <p className="text-gray-600 leading-7">
+            <p className="text-sm leading-7 text-gray-600 sm:text-base">
               Tell us where you’re going, when you’re traveling, and what you
               need. Explore flights, hotels, transport, and holiday experiences
               tailored to your trip.
@@ -44,17 +43,16 @@ const How = () => {
           </div>
 
           {/* 02 */}
-          <div className="group md:mt-28">
+          <div className="group md:mt-20 lg:mt-28">
             <FaMapMarkedAlt
-              size={70}
-              className="text-blue-400 rounded-full bg-blue-200 px-4 py-4 mb-5 group-hover:translate-x-2 transition-transform duration-300"
+              className="mb-5 rounded-full bg-blue-200 p-4 text-[68px] text-blue-400 transition-transform duration-300 group-hover:translate-x-2 sm:text-[72px]"
             />
 
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
+            <h3 className="mb-3 text-lg font-bold leading-7 text-gray-900 sm:text-xl">
               02. Find What Fits
             </h3>
 
-            <p className="text-gray-600 leading-7">
+            <p className="text-sm leading-7 text-gray-600 sm:text-base">
               Compare your options by price, location, ratings, and features
               to find the perfect match for your travel plans and budget.
             </p>
@@ -63,32 +61,30 @@ const How = () => {
           {/* 03 */}
           <div className="group">
             <MdAutoAwesome
-              size={70}
-              className="text-blue-400 rounded-full bg-blue-200 px-4 py-4 mb-5 group-hover:rotate-12 transition-transform duration-300"
+              className="mb-5 rounded-full bg-blue-200 p-4 text-[68px] text-blue-400 transition-transform duration-300 group-hover:rotate-12 sm:text-[72px]"
             />
 
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
+            <h3 className="mb-3 text-lg font-bold leading-7 text-gray-900 sm:text-xl">
               03. Book With Confidence
             </h3>
 
-            <p className="text-gray-600 leading-7">
+            <p className="text-sm leading-7 text-gray-600 sm:text-base">
               Choose your preferred option and complete your booking through a
               simple, secure, and transparent checkout process.
             </p>
           </div>
 
           {/* 04 */}
-          <div className="group md:mt-28">
+          <div className="group md:mt-20 lg:mt-28">
             <MdOutlinePayments
-              size={70}
-              className="text-blue-400 rounded-full bg-blue-200 px-4 py-4 mb-5 group-hover:scale-110 transition-transform duration-300"
+              className="mb-5 rounded-full bg-blue-200 p-4 text-[68px] text-blue-400 transition-transform duration-300 group-hover:scale-110 sm:text-[72px]"
             />
 
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
+            <h3 className="mb-3 text-lg font-bold leading-7 text-gray-900 sm:text-xl">
               04. Travel With Ease
             </h3>
 
-            <p className="text-gray-600 leading-7">
+            <p className="text-sm leading-7 text-gray-600 sm:text-base">
               Receive your booking confirmation and itinerary, keep everything
               organized in one place, and enjoy a smoother journey from start
               to finish.

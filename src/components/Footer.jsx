@@ -12,16 +12,18 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-gray-100">
+    <footer className="border-t border-gray-100 bg-white">
       {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-12 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-14 md:px-10 md:py-16 lg:px-12">
+
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:grid-cols-4 lg:gap-10 xl:gap-12">
 
           {/* Brand */}
-          <div>
-            <div className="flex items-center gap-2 mb-5">
-              <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
-                <FaPlane className="text-white text-lg" />
+          <div className="sm:col-span-2 lg:col-span-1">
+
+            <div className="mb-5 flex items-center gap-2">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-600">
+                <FaPlane className="text-lg text-white" />
               </div>
 
               <h2 className="text-2xl font-bold text-gray-900">
@@ -29,38 +31,42 @@ const Footer = () => {
               </h2>
             </div>
 
-            <p className="text-gray-500 leading-7 text-sm max-w-sm">
+            <p className="max-w-sm text-sm leading-7 text-gray-500">
               Your trusted travel companion for discovering amazing
               destinations, booking unforgettable trips, and creating
               memories that last a lifetime.
             </p>
 
             {/* Social Icons */}
-            <div className="flex items-center gap-3 mt-6">
+            <div className="mt-6 flex items-center gap-3">
               <a
                 href="#"
-                className="w-9 h-9 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all duration-300"
+                aria-label="Facebook"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition-all duration-300 hover:bg-blue-600 hover:text-white"
               >
                 <FaFacebookF className="text-sm" />
               </a>
 
               <a
                 href="#"
-                className="w-9 h-9 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center hover:bg-pink-500 hover:text-white transition-all duration-300"
+                aria-label="Instagram"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition-all duration-300 hover:bg-pink-500 hover:text-white"
               >
                 <FaInstagram className="text-sm" />
               </a>
 
               <a
                 href="#"
-                className="w-9 h-9 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center hover:bg-sky-500 hover:text-white transition-all duration-300"
+                aria-label="Twitter"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition-all duration-300 hover:bg-sky-500 hover:text-white"
               >
                 <FaTwitter className="text-sm" />
               </a>
 
               <a
                 href="#"
-                className="w-9 h-9 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center hover:bg-red-500 hover:text-white transition-all duration-300"
+                aria-label="YouTube"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition-all duration-300 hover:bg-red-500 hover:text-white"
               >
                 <FaYoutube className="text-sm" />
               </a>
@@ -69,7 +75,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-gray-900">
+            <h3 className="mb-5 text-lg font-semibold text-gray-900 sm:mb-6">
               Quick Links
             </h3>
 
@@ -85,7 +91,7 @@ const Footer = () => {
                 <li key={item}>
                   <a
                     href="#"
-                    className="text-gray-500 hover:text-blue-600 transition-colors duration-300"
+                    className="text-gray-500 transition-colors duration-300 hover:text-blue-600"
                   >
                     {item}
                   </a>
@@ -96,7 +102,7 @@ const Footer = () => {
 
           {/* Explore */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-gray-900">
+            <h3 className="mb-5 text-lg font-semibold text-gray-900 sm:mb-6">
               Explore
             </h3>
 
@@ -112,7 +118,7 @@ const Footer = () => {
                 <li key={item}>
                   <a
                     href="#"
-                    className="text-gray-500 hover:text-blue-600 transition-colors duration-300"
+                    className="text-gray-500 transition-colors duration-300 hover:text-blue-600"
                   >
                     {item}
                   </a>
@@ -123,32 +129,35 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-gray-900">
+            <h3 className="mb-5 text-lg font-semibold text-gray-900 sm:mb-6">
               Contact Us
             </h3>
 
             <div className="space-y-5 text-sm">
 
+              {/* Location */}
               <div className="flex items-start gap-3">
-                <FaMapMarkerAlt className="text-blue-600 mt-1 flex-shrink-0" />
+                <FaMapMarkerAlt className="mt-1 shrink-0 text-blue-600" />
 
                 <p className="text-gray-500">
                   Abuja, Nigeria
                 </p>
               </div>
 
-              <div className="flex items-center gap-3">
-                <FaPhoneAlt className="text-blue-600 flex-shrink-0" />
+              {/* Phone */}
+              <div className="flex items-start gap-3">
+                <FaPhoneAlt className="mt-1 shrink-0 text-blue-600" />
 
-                <p className="text-gray-500">
+                <p className="break-words text-gray-500">
                   +234 800 000 0000
                 </p>
               </div>
 
-              <div className="flex items-center gap-3">
-                <FaEnvelope className="text-blue-600 flex-shrink-0" />
+              {/* Email */}
+              <div className="flex items-start gap-3">
+                <FaEnvelope className="mt-1 shrink-0 text-blue-600" />
 
-                <p className="text-gray-500">
+                <p className="break-all text-gray-500">
                   hello@tripsphere.com
                 </p>
               </div>
@@ -157,20 +166,26 @@ const Footer = () => {
 
             {/* Newsletter */}
             <div className="mt-7">
-              <h4 className="text-sm font-semibold mb-3 text-gray-900">
+              <h4 className="mb-3 text-sm font-semibold text-gray-900">
                 Get travel updates
               </h4>
 
-              <div className="flex bg-gray-50 border border-gray-200 rounded-xl overflow-hidden focus-within:border-blue-500 transition">
+              <div className="flex w-full overflow-hidden rounded-xl border border-gray-200 bg-gray-50 transition focus-within:border-blue-500">
+
                 <input
                   type="email"
                   placeholder="Your email address"
-                  className="min-w-0 flex-1 bg-transparent px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 outline-none"
+                  className="min-w-0 flex-1 bg-transparent px-3 py-3 text-sm text-gray-900 outline-none placeholder:text-gray-400 sm:px-4"
                 />
 
-                <button className="px-4 bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-300">
+                <button
+                  type="button"
+                  aria-label="Subscribe"
+                  className="flex shrink-0 items-center justify-center bg-blue-600 px-4 text-white transition-colors duration-300 hover:bg-blue-700"
+                >
                   <FaArrowRight />
                 </button>
+
               </div>
             </div>
           </div>
@@ -178,25 +193,25 @@ const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-gray-200 mt-14 pt-7">
+        <div className="mt-12 border-t border-gray-200 pt-6 sm:mt-14 sm:pt-7">
 
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+          <div className="flex flex-col items-center justify-between gap-5 text-center text-sm md:flex-row md:text-left">
 
             <p className="text-gray-500">
               © 2026 TripSphere. All rights reserved.
             </p>
 
-            <div className="flex items-center gap-6">
+            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 sm:gap-x-6">
               <a
                 href="#"
-                className="text-gray-500 hover:text-blue-600 transition-colors duration-300"
+                className="text-gray-500 transition-colors duration-300 hover:text-blue-600"
               >
                 Privacy Policy
               </a>
 
               <a
                 href="#"
-                className="text-gray-500 hover:text-blue-600 transition-colors duration-300"
+                className="text-gray-500 transition-colors duration-300 hover:text-blue-600"
               >
                 Terms & Conditions
               </a>

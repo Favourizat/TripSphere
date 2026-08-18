@@ -1,4 +1,3 @@
-
 import {
   FaPlane,
   FaHotel,
@@ -10,96 +9,33 @@ import {
 
 import { Link } from "react-router-dom";
 
-import FlightImage from "../../assets/FlightImage.avif";
-import HotelImage from "../../assets/HotelImage.avif";
-import TrainImage from "../../assets/TrainImage.avif";
-import HolidayImage from "../../assets/HolidayImage.avif";
+import { services } from "../../constant/tourdata";
 
-const services = [
-  {
-    image: FlightImage,
-    icon: FaPlane,
-    title: "Flight Booking",
-    description:
-      "Find and compare flights from different destinations and choose the option that works best for your journey.",
-    features: [
-      "Compare flight fares",
-      "Flexible travel dates",
-      "Multiple airlines",
-    ],
-    link: "Explore Flights",
-    path: "/flights",
-  },
 
-  {
-    image: HotelImage,
-    icon: FaHotel,
-    title: "Hotel Booking",
-    description:
-      "Discover comfortable stays that match your destination, budget, and travel preferences.",
-    features: [
-      "Compare hotel prices",
-      "Guest ratings and reviews",
-      "Hotel amenities",
-    ],
-    link: "Find a Hotel",
-    path: "/hotels",
-  },
-
-  {
-    image: TrainImage,
-    icon: FaBus,
-    title: "Bus & Train",
-    description:
-      "Find convenient and affordable transportation options for journeys within and between destinations.",
-    features: [
-      "Compare transport options",
-      "Departure schedules",
-      "Seat availability",
-    ],
-    link: "Find Transport",
-    path: "/transport",
-  },
-
-  {
-    image: HolidayImage,
-    icon: FaUmbrellaBeach,
-    title: "Holiday Packages",
-    description:
-      "Discover unforgettable holiday experiences tailored to your destination, budget, and travel style.",
-    features: [
-      "Curated holiday packages",
-      "Exciting activities & experiences",
-      "Accommodation & travel included",
-    ],
-    link: "Explore Holidays",
-    path: "/holidays",
-  },
-];
 
 const CoreServices = () => {
   return (
-    <section className="px-5 py-16 sm:px-8 lg:px-12">
+    <section className="bg-white px-4 py-14 sm:px-6 sm:py-16 md:px-12 md:py-20 lg:px-20">
       <div className="mx-auto max-w-7xl">
 
         {/* Section Heading */}
-        <div className="mb-16 max-w-2xl">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
+        <div className="mb-10 max-w-2xl sm:mb-12 md:mb-16">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-blue-600 sm:mb-4 sm:text-sm">
             What We Offer
           </p>
 
-          <h2 className="text-4xl font-bold leading-tight text-gray-900 md:text-5xl">
+          <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl md:text-5xl">
             Our Core Services
           </h2>
 
-          <p className="mt-5 text-lg leading-8 text-gray-600">
+          <p className="mt-4 text-base leading-7 text-gray-600 sm:mt-5 sm:text-lg sm:leading-8">
             Everything you need to plan, book, and enjoy your journey,
             conveniently brought together in one place.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 gap-x-16 gap-y-16 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-x-10 gap-y-12 sm:gap-y-14 md:grid-cols-2 md:gap-x-10 md:gap-y-16 lg:gap-x-16">
           {services.map((service, index) => {
             const Icon = service.icon;
 
@@ -107,7 +43,7 @@ const CoreServices = () => {
               <div key={index} className="group">
 
                 {/* Service Image */}
-                <div className="relative mb-7 h-72 overflow-hidden rounded-3xl">
+                <div className="relative mb-5 h-60 w-full overflow-hidden rounded-2xl sm:mb-6 sm:h-72 sm:rounded-3xl md:h-64 lg:h-72">
                   <img
                     src={service.image}
                     alt={service.title}
@@ -118,38 +54,39 @@ const CoreServices = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
                   {/* Icon */}
-                  <div className="absolute bottom-5 left-5 flex h-12 w-12 items-center justify-center rounded-xl bg-white shadow-md">
-                    <Icon className="text-xl text-blue-600" />
+                  <div className="absolute bottom-4 left-4 flex h-11 w-11 items-center justify-center rounded-xl bg-white shadow-md sm:bottom-5 sm:left-5 sm:h-12 sm:w-12">
+                    <Icon className="text-lg text-blue-600 sm:text-xl" />
                   </div>
                 </div>
 
                 {/* Service Title */}
-                <h3 className="mb-4 text-2xl font-bold text-gray-900">
+                <h3 className="mb-3 text-xl font-bold text-gray-900 sm:mb-4 sm:text-2xl">
                   {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="mb-6 max-w-xl leading-7 text-gray-600">
+                <p className="mb-5 max-w-xl text-sm leading-7 text-gray-600 sm:mb-6 sm:text-base">
                   {service.description}
                 </p>
 
                 {/* Features */}
-                <div className="mb-7 space-y-3">
+                <div className="mb-6 space-y-3 sm:mb-7">
                   {service.features.map((feature, featureIndex) => (
                     <div
                       key={featureIndex}
-                      className="flex items-center gap-3"
+                      className="flex items-start gap-3"
                     >
-                      <FaCheck className="shrink-0 text-sm text-blue-500" />
+                      <FaCheck className="mt-1 shrink-0 text-xs text-blue-500 sm:text-sm" />
 
-                      <span className="text-sm text-gray-600">
+                      <span className="text-sm leading-6 text-gray-600">
                         {feature}
                       </span>
                     </div>
                   ))}
                 </div>
 
-                {/* CTA
+                {/* CTA */}
+                {/* 
                 <Link
                   to={service.path}
                   className="inline-flex items-center gap-2 font-semibold text-blue-600 transition-all duration-300 hover:gap-3"
@@ -157,7 +94,8 @@ const CoreServices = () => {
                   {service.link}
 
                   <FaArrowRight size={14} />
-                </Link> */}
+                </Link>
+                */}
               </div>
             );
           })}

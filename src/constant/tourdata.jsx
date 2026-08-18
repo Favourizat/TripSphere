@@ -1,3 +1,158 @@
+import FlightImage from "../assets/FlightImage.avif";
+import HotelImage from "../assets/HotelImage.avif";
+import TrainImage from "../assets/TrainImage.avif";
+import HolidayImage from "../assets/HolidayImage.avif";
+
+
+
+export const services = [
+  {
+    image: FlightImage,
+    icon: FaPlane,
+    title: "Flight Booking",
+    description:
+      "Find and compare flights from different destinations and choose the option that works best for your journey.",
+    features: [
+      "Compare flight fares",
+      "Flexible travel dates",
+      "Multiple airlines",
+    ],
+    link: "Explore Flights",
+    path: "/flights",
+  },
+
+  {
+    image: HotelImage,
+    icon: FaHotel,
+    title: "Hotel Booking",
+    description:
+      "Discover comfortable stays that match your destination, budget, and travel preferences.",
+    features: [
+      "Compare hotel prices",
+      "Guest ratings and reviews",
+      "Hotel amenities",
+    ],
+    link: "Find a Hotel",
+    path: "/hotels",
+  },
+
+  {
+    image: TrainImage,
+    icon: FaBus,
+    title: "Bus & Train",
+    description:
+      "Find convenient and affordable transportation options for journeys within and between destinations.",
+    features: [
+      "Compare transport options",
+      "Departure schedules",
+      "Seat availability",
+    ],
+    link: "Find Transport",
+    path: "/transport",
+  },
+
+  {
+    image: HolidayImage,
+    icon: FaUmbrellaBeach,
+    title: "Holiday Packages",
+    description:
+      "Discover unforgettable holiday experiences tailored to your destination, budget, and travel style.",
+    features: [
+      "Curated holiday packages",
+      "Exciting activities & experiences",
+      "Accommodation & travel included",
+    ],
+    link: "Explore Holidays",
+    path: "/holidays",
+  },
+]
+
+
+export const bookingForms = {
+    hotel: [
+        {
+            name: "destination",
+            label: "Destination",
+            type: "text",
+            placeholder: "Where are you going?",
+        },
+        {
+            name: "checkIn",
+            label: "Check-in",
+            type: "date",
+        },
+        {
+            name: "checkOut",
+            label: "Check-out",
+            type: "date",
+        },
+        {
+            name: "guests",
+            label: "Guests",
+            type: "number",
+            placeholder: "Number of guests",
+        },
+    ],
+
+    flight: [
+        {
+            name: "from",
+            label: "From",
+            type: "text",
+            placeholder: "Departure city",
+        },
+        {
+            name: "to",
+            label: "To",
+            type: "text",
+            placeholder: "Arrival city",
+        },
+        {
+            name: "departure",
+            label: "Departure",
+            type: "date",
+        },
+        {
+            name: "returnDate",
+            label: "Return",
+            type: "date",
+        },
+        {
+            name: "passengers",
+            label: "Passengers",
+            type: "number",
+            placeholder: "Passengers",
+        },
+    ],
+
+    holiday: [
+        {
+            name: "destination",
+            label: "Destination",
+            type: "text",
+            placeholder: "Where do you want to go?",
+        },
+        {
+            name: "travelDate",
+            label: "Travel Date",
+            type: "date",
+        },
+        {
+            name: "duration",
+            label: "Duration",
+            type: "number",
+            placeholder: "Days",
+        },
+        {
+            name: "guests",
+            label: "Guests",
+            type: "number",
+            placeholder: "Guests",
+        },
+    ],
+};
+
+
 
 export const tourdata = [
   {

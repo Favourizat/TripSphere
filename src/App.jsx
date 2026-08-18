@@ -24,6 +24,8 @@ import Flights from "./pages/Flights";
 import FlightDetails from "./pages/FlightDetails";
 import HolidaySearch from "./pages/HolidaySearch";
 import HolidaySearchDetails from "./pages/HolidaySearchDetails";
+import BookTour from "./pages/BookTour";
+import BookHoliday from "./pages/BookHoliday";
 
 function App() {
 
@@ -56,6 +58,17 @@ function App() {
           path="/services"
           element={<Services />}
         />
+
+        <Route
+          path="/book-tour/:id"
+          element={<BookTour />}
+        />
+
+        <Route
+          path="/book-holiday/:id"
+          element={<BookHoliday />}
+        />
+
         <Route
           path="/holidays/:id"
           element={<HolidayDetails />}

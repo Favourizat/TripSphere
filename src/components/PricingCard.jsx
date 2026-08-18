@@ -3,72 +3,83 @@ import { FaCheck } from "react-icons/fa";
 
 const PricingCard = ({ pricing }) => {
     const {
-        id,
         image,
         tripType,
         title,
         price,
-        duration,
         description,
         features,
     } = pricing;
-    return (
 
-        <div className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-            {/* Image */}
-            <div className="relative">
+    return (
+        <div className="group overflow-hidden rounded-3xl bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+
+            {/* Image Section */}
+            <div className="relative p-3 sm:p-4">
+
                 <img
                     src={image}
                     alt={title}
-                    className="w-full h-60 object-cover rounded-4xl mx-8"
+                    className="h-52 w-full rounded-2xl object-cover transition-transform duration-500 group-hover:scale-[1.02] sm:h-60"
                 />
 
-                {/* TripType Badge */}
-                <span className="absolute top-5 left-11 text-white text-xl font-bold px-4 py-2 rounded-full">
+                {/* Trip Type Badge */}
+                <span className="absolute left-7 top-7 rounded-full bg-black/40 px-3 py-1.5 text-sm font-bold text-white backdrop-blur-sm sm:left-8 sm:top-8 sm:px-4 sm:py-2 sm:text-base">
                     {tripType}
                 </span>
-                {/* TripType Badge */}
-                <span className="text-black pt-5 pl-7 text-3xl font-bold px-4 py-2 rounded-full">
-                    {price}
-                </span>
+
+                {/* Price */}
+                <div className="absolute bottom-7 left-7 rounded-xl bg-white/95 px-3 py-2 shadow-md backdrop-blur-sm sm:bottom-8 sm:left-8 sm:px-4 sm:py-2">
+                    <span className="text-xl font-bold text-gray-900 sm:text-2xl">
+                        {price}
+                    </span>
+                </div>
+
             </div>
 
             {/* Card Content */}
-            <div className="p-6">
-                {/* Destination & Rating */}
-                <div className="">
-                    <div className="gap-2 text-gray-600">
-                        <span className="font-medium">{description}</span>
-                    </div>
+            <div className="p-5 sm:p-6">
 
-                    <div className="flex flex-col gap-4 my-6">
-                        {features.map((feature, index) => (
-                            <div key={index} className="flex items-center gap-3">
-                                <FaCheck className="text-blue-500 shrink-0" />
-                                <span className="font-semibold text-gray-600">
-                                    {feature}
-                                </span>
-                            </div>
-                        ))}
-                    </div>
+                {/* Description */}
+                <div>
+                    <p className="text-sm leading-7 text-gray-600 sm:text-base">
+                        {description}
+                    </p>
                 </div>
 
+                {/* Features */}
+                <div className="my-6 space-y-4">
 
+                    {features.map((feature, index) => (
+                        <div
+                            key={index}
+                            className="flex items-start gap-3"
+                        >
+                            <FaCheck className="mt-1 shrink-0 text-sm text-blue-500" />
 
-                {/* Price & Button */}
-                <div className="mt-6 flex items-center justify-between">
+                            <span className="text-sm font-semibold leading-6 text-gray-600 sm:text-base">
+                                {feature}
+                            </span>
+                        </div>
+                    ))}
+
+                </div>
+
+                {/* Button */}
+                <div className="mt-6">
 
                     <Link
-                        to={"/service"}
-                        className="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition"
+                        to="/service"
+                        className="inline-flex w-full items-center justify-center rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:bg-blue-700 sm:w-auto sm:px-6 sm:text-base"
                     >
                         View All Services
                     </Link>
+
                 </div>
+
             </div>
-
-
         </div>
-    )
-}
+    );
+};
+
 export default PricingCard;

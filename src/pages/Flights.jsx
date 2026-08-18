@@ -11,17 +11,14 @@ import { flightData } from "../constant/tourdata";
 import FlightCard from "../components/FlightCard";
 
 const Flights = () => {
-
     const location = useLocation();
 
     const searchData = location.state?.searchData;
 
     const [sortBy, setSortBy] = useState("recommended");
 
-
     // Filter flights according to search
     const filteredFlights = flightData.filter((flight) => {
-
         if (!searchData) {
             return true;
         }
@@ -47,10 +44,8 @@ const Flights = () => {
         return fromMatch && toMatch;
     });
 
-
     // Sort flights
     const sortedFlights = [...filteredFlights].sort((a, b) => {
-
         if (sortBy === "priceLow") {
             return a.price - b.price;
         }
@@ -66,53 +61,57 @@ const Flights = () => {
         return 0;
     });
 
-
     return (
         <div className="min-h-screen bg-gray-50">
 
             {/* ================= HERO ================= */}
 
-            <section className="bg-blue-600 text-white px-6 py-12">
+            <section className="bg-blue-600 px-4 py-10 text-white sm:px-6 sm:py-12 lg:px-8">
 
-                <div className="max-w-7xl mx-auto">
+                <div className="mx-auto w-full max-w-7xl">
 
-                    <div className="flex items-center gap-3">
+                    {/* Hero Heading */}
 
-                        <Plane size={32} />
+                    <div className="flex items-start gap-3 sm:items-center">
 
-                        <h1 className="text-4xl font-bold">
+                        <Plane
+                            size={28}
+                            className="mt-1 shrink-0 sm:mt-0 sm:h-8 sm:w-8"
+                        />
+
+                        <h1 className="text-2xl font-bold leading-tight sm:text-3xl md:text-4xl">
                             Find Your Perfect Flight
                         </h1>
 
                     </div>
 
-                    <p className="mt-3 text-blue-100 text-lg">
+                    <p className="mt-3 max-w-2xl text-sm leading-6 text-blue-100 sm:text-base sm:text-lg">
                         Compare flights and find the best option
                         for your journey.
                     </p>
 
 
-                    {/* Search Summary */}
+                    {/* ================= SEARCH SUMMARY ================= */}
 
                     {searchData && (
 
-                        <div className="mt-8 bg-white text-gray-800 rounded-2xl p-5 flex flex-wrap gap-8 items-center">
+                        <div className="mt-8 grid grid-cols-1 gap-5 rounded-2xl bg-white p-5 text-gray-800 sm:grid-cols-2 lg:flex lg:flex-wrap lg:items-center lg:gap-8">
 
                             {/* From */}
 
-                            <div className="flex items-center gap-3">
+                            <div className="flex min-w-0 items-center gap-3">
 
                                 <ArrowRightLeft
-                                    className="text-blue-600"
+                                    className="shrink-0 text-blue-600"
                                 />
 
-                                <div>
+                                <div className="min-w-0">
 
                                     <p className="text-xs text-gray-500">
                                         From
                                     </p>
 
-                                    <p className="font-semibold">
+                                    <p className="truncate font-semibold">
                                         {searchData.from}
                                     </p>
 
@@ -123,19 +122,19 @@ const Flights = () => {
 
                             {/* To */}
 
-                            <div className="flex items-center gap-3">
+                            <div className="flex min-w-0 items-center gap-3">
 
                                 <Plane
-                                    className="text-blue-600"
+                                    className="shrink-0 text-blue-600"
                                 />
 
-                                <div>
+                                <div className="min-w-0">
 
                                     <p className="text-xs text-gray-500">
                                         To
                                     </p>
 
-                                    <p className="font-semibold">
+                                    <p className="truncate font-semibold">
                                         {searchData.to}
                                     </p>
 
@@ -146,19 +145,19 @@ const Flights = () => {
 
                             {/* Departure */}
 
-                            <div className="flex items-center gap-3">
+                            <div className="flex min-w-0 items-center gap-3">
 
                                 <CalendarDays
-                                    className="text-blue-600"
+                                    className="shrink-0 text-blue-600"
                                 />
 
-                                <div>
+                                <div className="min-w-0">
 
                                     <p className="text-xs text-gray-500">
                                         Departure
                                     </p>
 
-                                    <p className="font-semibold">
+                                    <p className="truncate font-semibold">
                                         {searchData.departure}
                                     </p>
 
@@ -169,19 +168,19 @@ const Flights = () => {
 
                             {/* Return */}
 
-                            <div className="flex items-center gap-3">
+                            <div className="flex min-w-0 items-center gap-3">
 
                                 <CalendarDays
-                                    className="text-blue-600"
+                                    className="shrink-0 text-blue-600"
                                 />
 
-                                <div>
+                                <div className="min-w-0">
 
                                     <p className="text-xs text-gray-500">
                                         Return
                                     </p>
 
-                                    <p className="font-semibold">
+                                    <p className="truncate font-semibold">
                                         {searchData.returnDate || "One way"}
                                     </p>
 
@@ -192,19 +191,19 @@ const Flights = () => {
 
                             {/* Passengers */}
 
-                            <div className="flex items-center gap-3">
+                            <div className="flex min-w-0 items-center gap-3">
 
                                 <Users
-                                    className="text-blue-600"
+                                    className="shrink-0 text-blue-600"
                                 />
 
-                                <div>
+                                <div className="min-w-0">
 
                                     <p className="text-xs text-gray-500">
                                         Passengers
                                     </p>
 
-                                    <p className="font-semibold">
+                                    <p className="truncate font-semibold">
                                         {searchData.passengers}
                                     </p>
 
@@ -223,17 +222,19 @@ const Flights = () => {
 
             {/* ================= RESULTS ================= */}
 
-            <section className="max-w-7xl mx-auto px-6 py-10">
+            <section className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
 
-                <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 mb-6">
+                {/* Results Header */}
+
+                <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
 
                     <div>
 
-                        <h2 className="text-2xl font-bold text-gray-900">
+                        <h2 className="text-xl font-bold text-gray-900 sm:text-2xl">
                             Available Flights
                         </h2>
 
-                        <p className="text-gray-500 mt-1">
+                        <p className="mt-1 text-sm text-gray-500 sm:text-base">
                             {sortedFlights.length} flights found
                         </p>
 
@@ -247,7 +248,7 @@ const Flights = () => {
                         onChange={(e) =>
                             setSortBy(e.target.value)
                         }
-                        className="bg-white border border-gray-200 rounded-xl px-5 py-3 outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-blue-500 sm:w-auto sm:min-w-[210px] sm:px-5 sm:text-base"
                     >
 
                         <option value="recommended">
@@ -271,11 +272,11 @@ const Flights = () => {
                 </div>
 
 
-                {/* Flight Cards */}
+                {/* ================= FLIGHT CARDS ================= */}
 
                 {sortedFlights.length > 0 ? (
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-6">
 
                         {sortedFlights.map((flight) => (
 
@@ -290,13 +291,13 @@ const Flights = () => {
 
                 ) : (
 
-                    <div className="bg-white rounded-2xl p-12 text-center">
+                    <div className="rounded-2xl bg-white p-8 text-center sm:p-12">
 
-                        <h3 className="text-2xl font-bold text-gray-800">
+                        <h3 className="text-xl font-bold text-gray-800 sm:text-2xl">
                             No flights found
                         </h3>
 
-                        <p className="text-gray-500 mt-2">
+                        <p className="mt-2 text-sm text-gray-500 sm:text-base">
                             Try searching for another destination.
                         </p>
 

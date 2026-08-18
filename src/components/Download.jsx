@@ -1,52 +1,54 @@
-
 import appdownload from "../assets/appdownload.jpg";
 import googleplay1 from "../assets/googleplay1.jpg";
 import googleplay2 from "../assets/googleplay2.jpg";
 
 const Download = () => {
   return (
-    <section className="py-20 px-6 bg-blue-300">
-      <div className="max-w-7xl mx-auto text-white flex flex-col md:flex-row items-center justify-between gap-12">
+    <section className="bg-blue-300 px-4 py-14 sm:px-6 sm:py-16 md:py-20">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-10 sm:gap-12 md:flex-row md:gap-10 lg:gap-16">
 
         {/* Left Content */}
-        <div className="flex-1 text-center md:text-left">
-          <h2 className="text-3xl md:text-5xl font-bold mb-5">
+        <div className="w-full flex-1 text-center md:text-left">
+
+          <h2 className="mb-4 text-3xl font-bold leading-tight text-white sm:mb-5 sm:text-4xl md:text-5xl">
             Plan Your Journey on the Go
           </h2>
 
-          <p className="text-xl font-semibold md:text-lg leading-relaxed max-w-xl mb-8">
+          <p className="mx-auto mb-7 max-w-xl text-base font-semibold leading-7 text-white sm:mb-8 sm:text-lg md:mx-0 md:text-lg md:leading-relaxed">
             Plan your trips, discover amazing destinations, and manage every
             detail of your journey right from your phone.
           </p>
 
           {/* Download Buttons */}
-          <div className="flex items-center justify-center md:justify-start gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:justify-start">
+            
             <img
               src={googleplay1}
               alt="Download on Google Play"
-              className="w-32 sm:w-36 h-auto object-contain rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+              className="w-28 cursor-pointer rounded-lg object-contain transition-transform duration-300 hover:scale-105 sm:w-32 md:w-36"
             />
 
             <img
-              src={googleplay1}
+              src={googleplay2}
               alt="Get it on Google Play"
-              className="w-32 sm:w-36 h-auto object-contain rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+              className="w-28 cursor-pointer rounded-lg object-contain transition-transform duration-300 hover:scale-105 sm:w-32 md:w-36"
             />
 
             <img
               src={googleplay1}
               alt="Download our mobile app"
-              className="w-32 sm:w-36 h-auto object-contain rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+              className="w-28 cursor-pointer rounded-lg object-contain transition-transform duration-300 hover:scale-105 sm:w-32 md:w-36"
             />
+
           </div>
         </div>
 
         {/* Right Image */}
-        <div className="flex-1 flex justify-center">
+        <div className="flex w-full flex-1 justify-center">
           <img
             src={appdownload}
             alt="Travel app preview"
-            className="w-72 h-72 md:w-96 md:h-96 object-cover rounded-3xl shadow-xl"
+            className="h-64 w-64 rounded-3xl object-cover shadow-xl sm:h-72 sm:w-72 md:h-80 md:w-80 lg:h-96 lg:w-96"
           />
         </div>
 

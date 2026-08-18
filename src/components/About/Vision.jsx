@@ -2,25 +2,26 @@ import CountUp from "../CountUp";
 
 const Vision = () => {
   return (
-    <section className="py-20 px-6 md:px-12 lg:px-20 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <section className="bg-white px-4 py-14 sm:px-6 sm:py-16 md:px-12 md:py-20 lg:px-20">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 items-center gap-10 sm:gap-12 lg:grid-cols-2 lg:gap-16 xl:gap-20">
 
           {/* Left Content */}
-          <div>
+          <div className="w-full">
+
             {/* Small Heading */}
-            <p className="text-blue-600 font-semibold uppercase tracking-widest text-sm mb-3">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-blue-600 sm:text-sm">
               Vision
             </p>
 
             {/* Main Heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+            <h1 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl md:text-5xl lg:text-6xl">
               TripSphere{" "}
               <span className="text-blue-600">Visionary Pathway</span>
             </h1>
 
             {/* Intro */}
-            <p className="mt-6 max-w-2xl text-gray-600 text-lg leading-8">
+            <p className="mt-5 max-w-2xl text-base leading-7 text-gray-600 sm:mt-6 sm:text-lg sm:leading-8">
               TripSphere Visionary Pathway is our commitment to transforming
               travel into a seamless, inspiring, and unforgettable
               experience—connecting people to the right destinations,
@@ -28,37 +29,37 @@ const Vision = () => {
             </p>
 
             {/* Stats */}
-            <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="mt-8 grid grid-cols-1 gap-4 sm:mt-10 sm:grid-cols-3 sm:gap-4">
 
               {/* Happy Clients */}
-              <div className="bg-gray-50 border border-gray-100 rounded-2xl p-5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <h3 className="text-3xl md:text-4xl font-bold text-blue-600">
+              <div className="rounded-2xl border border-gray-100 bg-gray-50 p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-4 md:p-5">
+                <h3 className="text-3xl font-bold text-blue-600 sm:text-3xl md:text-4xl">
                   <CountUp end={10} suffix="M" />
                 </h3>
 
-                <p className="mt-2 text-sm text-gray-600 font-medium">
+                <p className="mt-2 text-sm font-medium leading-5 text-gray-600">
                   Happy Clients
                 </p>
               </div>
 
               {/* Customer Satisfaction */}
-              <div className="bg-gray-50 border border-gray-100 rounded-2xl p-5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <h3 className="text-3xl md:text-4xl font-bold text-blue-600">
+              <div className="rounded-2xl border border-gray-100 bg-gray-50 p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-4 md:p-5">
+                <h3 className="text-3xl font-bold text-blue-600 sm:text-3xl md:text-4xl">
                   <CountUp end={99} suffix="%" />
                 </h3>
 
-                <p className="mt-2 text-sm text-gray-600 font-medium">
+                <p className="mt-2 text-sm font-medium leading-5 text-gray-600">
                   Customer Satisfaction
                 </p>
               </div>
 
               {/* Positive Reviews */}
-              <div className="bg-gray-50 border border-gray-100 rounded-2xl p-5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <h3 className="text-3xl md:text-4xl font-bold text-blue-600">
+              <div className="rounded-2xl border border-gray-100 bg-gray-50 p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-4 md:p-5">
+                <h3 className="text-3xl font-bold text-blue-600 sm:text-3xl md:text-4xl">
                   <CountUp end={18} suffix="K" duration={1000} />
                 </h3>
 
-                <p className="mt-2 text-sm text-gray-600 font-medium">
+                <p className="mt-2 text-sm font-medium leading-5 text-gray-600">
                   Positive Reviews
                 </p>
               </div>
@@ -67,24 +68,26 @@ const Vision = () => {
           </div>
 
           {/* Right Vision Card */}
-          <div className="relative">
-            {/* Decorative background */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-100 rounded-full blur-2xl opacity-70"></div>
+          <div className="relative w-full">
 
-            <div className="relative bg-blue-600 rounded-[2rem] p-8 md:p-10 shadow-xl">
+            {/* Decorative background */}
+            <div className="absolute -right-2 -top-3 h-16 w-16 rounded-full bg-blue-100 opacity-70 blur-2xl sm:-right-4 sm:-top-4 sm:h-24 sm:w-24"></div>
+
+            {/* Vision Card */}
+            <div className="relative rounded-[1.5rem] bg-blue-600 p-6 shadow-xl sm:rounded-[2rem] sm:p-8 md:p-10">
 
               {/* Small label */}
-              <span className="inline-block bg-white/15 text-white text-sm font-medium px-4 py-2 rounded-full mb-6">
+              <span className="mb-5 inline-block rounded-full bg-white/15 px-4 py-2 text-xs font-medium text-white sm:mb-6 sm:text-sm">
                 Our Vision
               </span>
 
               {/* Heading */}
-              <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-6">
+              <h2 className="mb-5 text-2xl font-bold leading-tight text-white sm:mb-6 sm:text-3xl md:text-4xl">
                 Making Every Journey Worth Remembering
               </h2>
 
               {/* Paragraph */}
-              <div className="space-y-5 text-blue-50 leading-7">
+              <div className="space-y-4 text-sm leading-7 text-blue-50 sm:space-y-5 sm:text-base sm:leading-7">
                 <p>
                   At TripSphere, we envision a world where exploring new
                   places is simple, accessible, and truly memorable. Our
@@ -102,8 +105,6 @@ const Vision = () => {
                   journey, TripSphere aims to make every step smoother,
                   smarter, and more enjoyable.
                 </p>
-
-                
               </div>
 
             </div>

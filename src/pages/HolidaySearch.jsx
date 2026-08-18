@@ -82,20 +82,19 @@ const HolidaySearch = () => {
 
         <div className="min-h-screen bg-gray-50">
 
-
             {/* ================= HERO ================= */}
 
-            <section className="bg-blue-600 px-6 py-12 text-white">
+            <section className="bg-blue-600 px-4 py-10 text-white sm:px-6 sm:py-12 lg:py-14">
 
                 <div className="mx-auto max-w-7xl">
 
-                    <h1 className="text-4xl font-bold">
+                    <h1 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
                         Find Your Perfect Holiday
                     </h1>
 
-                    <p className="mt-3 max-w-2xl text-lg text-blue-100">
-                        Discover amazing destinations and carefully
-                        planned holiday experiences.
+                    <p className="mt-3 max-w-2xl text-base leading-relaxed text-blue-100 sm:text-lg">
+                        Discover amazing destinations and carefully planned
+                        holiday experiences.
                     </p>
 
 
@@ -103,24 +102,32 @@ const HolidaySearch = () => {
 
                     {searchData && (
 
-                        <div className="mt-8 flex flex-wrap items-center gap-6 rounded-2xl bg-white p-5 text-gray-800">
-
+                        <div
+                            className="
+                        mt-7 grid grid-cols-1 gap-5 rounded-2xl
+                        bg-white p-4 text-gray-800 shadow-sm
+                        sm:grid-cols-2 sm:p-5
+                        lg:flex lg:flex-wrap lg:items-center lg:gap-x-8 lg:gap-y-5
+                    "
+                        >
 
                             {/* Destination */}
 
                             {searchData.destination && (
 
-                                <div className="flex items-center gap-3">
+                                <div className="flex min-w-0 items-center gap-3">
 
-                                    <MapPin className="text-blue-600" />
+                                    <MapPin
+                                        className="h-5 w-5 shrink-0 text-blue-600"
+                                    />
 
-                                    <div>
+                                    <div className="min-w-0">
 
                                         <p className="text-xs text-gray-500">
                                             Destination
                                         </p>
 
-                                        <p className="font-semibold">
+                                        <p className="truncate font-semibold">
                                             {searchData.destination}
                                         </p>
 
@@ -135,17 +142,19 @@ const HolidaySearch = () => {
 
                             {searchData.travelDate && (
 
-                                <div className="flex items-center gap-3">
+                                <div className="flex min-w-0 items-center gap-3">
 
-                                    <CalendarDays className="text-blue-600" />
+                                    <CalendarDays
+                                        className="h-5 w-5 shrink-0 text-blue-600"
+                                    />
 
-                                    <div>
+                                    <div className="min-w-0">
 
                                         <p className="text-xs text-gray-500">
                                             Travel Date
                                         </p>
 
-                                        <p className="font-semibold">
+                                        <p className="truncate font-semibold">
                                             {searchData.travelDate}
                                         </p>
 
@@ -160,9 +169,11 @@ const HolidaySearch = () => {
 
                             {searchData.duration && (
 
-                                <div className="flex items-center gap-3">
+                                <div className="flex min-w-0 items-center gap-3">
 
-                                    <Clock className="text-blue-600" />
+                                    <Clock
+                                        className="h-5 w-5 shrink-0 text-blue-600"
+                                    />
 
                                     <div>
 
@@ -185,17 +196,19 @@ const HolidaySearch = () => {
 
                             {searchData.guests && (
 
-                                <div className="flex items-center gap-3">
+                                <div className="flex min-w-0 items-center gap-3">
 
-                                    <Users className="text-blue-600" />
+                                    <Users
+                                        className="h-5 w-5 shrink-0 text-blue-600"
+                                    />
 
-                                    <div>
+                                    <div className="min-w-0">
 
                                         <p className="text-xs text-gray-500">
                                             Guests
                                         </p>
 
-                                        <p className="font-semibold">
+                                        <p className="truncate font-semibold">
                                             {searchData.guests}
                                         </p>
 
@@ -216,16 +229,15 @@ const HolidaySearch = () => {
 
             {/* ================= RESULTS ================= */}
 
-            <section className="mx-auto max-w-7xl px-6 py-12">
+            <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
 
+                <div className="mb-7 sm:mb-8">
 
-                <div className="mb-8">
-
-                    <h2 className="text-2xl font-bold text-gray-900">
+                    <h2 className="text-xl font-bold text-gray-900 sm:text-2xl">
                         Holiday Packages
                     </h2>
 
-                    <p className="mt-2 text-gray-500">
+                    <p className="mt-2 text-sm text-gray-500 sm:text-base">
                         {filteredHolidays.length}{" "}
                         {filteredHolidays.length === 1
                             ? "holiday"
@@ -240,32 +252,37 @@ const HolidaySearch = () => {
 
                 {filteredHolidays.length > 0 ? (
 
-                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    <div
+                        className="
+                    grid grid-cols-1 gap-5
+                    sm:gap-6
+                    md:grid-cols-2
+                    lg:grid-cols-3
+                "
+                    >
 
-                        {filteredHolidays.map(
-                            (holiday) => (
+                        {filteredHolidays.map((holiday) => (
 
-                                <HolidaySearchCard
-                                    key={holiday.id}
-                                    holiday={holiday}
-                                />
+                            <HolidaySearchCard
+                                key={holiday.id}
+                                holiday={holiday}
+                            />
 
-                            )
-                        )}
+                        ))}
 
                     </div>
 
                 ) : (
 
-                    <div className="rounded-2xl bg-white p-12 text-center shadow-sm">
+                    <div className="rounded-2xl bg-white p-8 text-center shadow-sm sm:p-12">
 
-                        <h3 className="text-2xl font-bold text-gray-800">
+                        <h3 className="text-xl font-bold text-gray-800 sm:text-2xl">
                             No holidays found
                         </h3>
 
-                        <p className="mt-2 text-gray-500">
-                            Try searching for another destination
-                            or changing your duration.
+                        <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-gray-500 sm:text-base">
+                            Try searching for another destination or changing
+                            your duration.
                         </p>
 
                     </div>

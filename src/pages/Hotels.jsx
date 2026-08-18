@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import {
@@ -37,8 +36,6 @@ const Hotels = () => {
     // Filter hotels
     const filteredHotels = hotelData
         .filter((hotel) => {
-            // If there is no destination search,
-            // show all hotels
             if (!searchData?.destination) {
                 return true;
             }
@@ -50,13 +47,10 @@ const Hotels = () => {
         .filter((hotel) => hotel.price <= maxPrice)
         .filter((hotel) => hotel.rating >= minRating)
         .filter((hotel) => {
-            // If no amenities are selected,
-            // don't filter by amenities
             if (selectedAmenities.length === 0) {
                 return true;
             }
 
-            // Hotel must have ALL selected amenities
             return selectedAmenities.every((amenity) =>
                 hotel.amenities.includes(amenity)
             );
@@ -76,7 +70,6 @@ const Hotels = () => {
             return b.rating - a.rating;
         }
 
-        // Recommended
         return 0;
     });
 
@@ -89,118 +82,160 @@ const Hotels = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen overflow-x-hidden bg-gray-50">
 
             {/* ================= HERO ================= */}
-            <section className="bg-blue-600 text-white px-6 py-12">
 
-                <div className="max-w-7xl mx-auto">
+            <section className="bg-blue-600 px-4 py-10 text-white sm:px-6 sm:py-12 lg:px-8 lg:py-14">
 
-                    <h1 className="text-4xl font-bold">
+                <div className="mx-auto max-w-7xl">
+
+                    <h1 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
                         Find Your Perfect Stay
                     </h1>
 
-                    <p className="mt-3 text-blue-100 text-lg">
+                    <p className="mt-3 max-w-3xl text-base leading-relaxed text-blue-100 sm:text-lg">
                         Discover comfortable hotels that match your
                         destination, budget and travel preferences.
                     </p>
 
-                    {/* Search Summary */}
+
+                    {/* ================= SEARCH SUMMARY ================= */}
+
                     {searchData && (
-                        <div className="mt-8 bg-white text-gray-800 rounded-2xl p-5 flex flex-wrap gap-6 items-center">
+
+                        <div
+                            className="
+                                mt-7 grid grid-cols-1 gap-5 rounded-2xl
+                                bg-white p-4 text-gray-800 shadow-sm
+                                sm:grid-cols-2 sm:p-5
+                                lg:flex lg:flex-wrap lg:items-center lg:gap-x-8 lg:gap-y-5
+                            "
+                        >
 
                             {/* Destination */}
-                            <div className="flex items-center gap-3">
-                                <MapPin className="text-blue-600" />
 
-                                <div>
+                            <div className="flex min-w-0 items-center gap-3">
+
+                                <MapPin className="h-5 w-5 shrink-0 text-blue-600" />
+
+                                <div className="min-w-0">
+
                                     <p className="text-xs text-gray-500">
                                         Destination
                                     </p>
 
-                                    <p className="font-semibold">
-                                        {searchData.destination}
+                                    <p className="truncate font-semibold">
+                                        {searchData.destination || "Any destination"}
                                     </p>
+
                                 </div>
+
                             </div>
 
-                            {/* Check-in */}
-                            <div className="flex items-center gap-3">
-                                <CalendarDays className="text-blue-600" />
 
-                                <div>
+                            {/* Check-in */}
+
+                            <div className="flex min-w-0 items-center gap-3">
+
+                                <CalendarDays className="h-5 w-5 shrink-0 text-blue-600" />
+
+                                <div className="min-w-0">
+
                                     <p className="text-xs text-gray-500">
                                         Check-in
                                     </p>
 
-                                    <p className="font-semibold">
-                                        {searchData.checkIn}
+                                    <p className="truncate font-semibold">
+                                        {searchData.checkIn || "Not selected"}
                                     </p>
+
                                 </div>
+
                             </div>
 
-                            {/* Check-out */}
-                            <div className="flex items-center gap-3">
-                                <CalendarDays className="text-blue-600" />
 
-                                <div>
+                            {/* Check-out */}
+
+                            <div className="flex min-w-0 items-center gap-3">
+
+                                <CalendarDays className="h-5 w-5 shrink-0 text-blue-600" />
+
+                                <div className="min-w-0">
+
                                     <p className="text-xs text-gray-500">
                                         Check-out
                                     </p>
 
-                                    <p className="font-semibold">
-                                        {searchData.checkOut}
+                                    <p className="truncate font-semibold">
+                                        {searchData.checkOut || "Not selected"}
                                     </p>
+
                                 </div>
+
                             </div>
 
-                            {/* Guests */}
-                            <div className="flex items-center gap-3">
-                                <Users className="text-blue-600" />
 
-                                <div>
+                            {/* Guests */}
+
+                            <div className="flex min-w-0 items-center gap-3">
+
+                                <Users className="h-5 w-5 shrink-0 text-blue-600" />
+
+                                <div className="min-w-0">
+
                                     <p className="text-xs text-gray-500">
                                         Guests
                                     </p>
 
-                                    <p className="font-semibold">
-                                        {searchData.guests}
+                                    <p className="truncate font-semibold">
+                                        {searchData.guests || "Not selected"}
                                     </p>
+
                                 </div>
+
                             </div>
 
                         </div>
+
                     )}
 
                 </div>
+
             </section>
 
 
             {/* ================= MAIN ================= */}
-            <section className="max-w-7xl mx-auto px-6 py-10">
 
-                <div className="flex flex-col lg:flex-row gap-8">
+            <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
+
+                <div className="flex flex-col gap-8 lg:flex-row">
+
 
                     {/* ================= FILTER SIDEBAR ================= */}
-                    <aside className="lg:w-72 bg-white rounded-2xl p-6 shadow-sm h-fit">
+
+                    <aside className="h-fit w-full rounded-2xl bg-white p-5 shadow-sm sm:p-6 lg:w-72 lg:shrink-0">
 
                         {/* Filter Header */}
-                        <div className="flex items-center justify-between">
+
+                        <div className="flex items-center justify-between gap-4">
 
                             <div className="flex items-center gap-2">
-                                <h2 className="text-xl font-bold text-gray-800">
+
+                                <h2 className="text-lg font-bold text-gray-800 sm:text-xl">
                                     Filters
                                 </h2>
 
                                 <SlidersHorizontal
-                                    size={20}
-                                    className="text-blue-600"
+                                    size={19}
+                                    className="shrink-0 text-blue-600"
                                 />
+
                             </div>
 
                             <button
                                 onClick={clearFilters}
-                                className="text-sm text-blue-600 hover:underline"
+                                className="shrink-0 text-xs font-medium text-blue-600 hover:underline sm:text-sm"
                             >
                                 Clear all
                             </button>
@@ -209,16 +244,17 @@ const Hotels = () => {
 
 
                         {/* ================= PRICE ================= */}
-                        <div className="mt-8">
 
-                            <div className="flex justify-between">
+                        <div className="mt-7 sm:mt-8">
 
-                                <h3 className="font-semibold">
+                            <div className="flex items-center justify-between gap-4">
+
+                                <h3 className="text-sm font-semibold sm:text-base">
                                     Price per night
                                 </h3>
 
-                                <span className="text-blue-600 font-semibold">
-                                    {maxPrice}
+                                <span className="text-sm font-semibold text-blue-600">
+                                    ${maxPrice}
                                 </span>
 
                             </div>
@@ -231,10 +267,10 @@ const Hotels = () => {
                                 onChange={(e) =>
                                     setMaxPrice(Number(e.target.value))
                                 }
-                                className="w-full mt-4 accent-blue-600"
+                                className="mt-4 w-full accent-blue-600"
                             />
 
-                            <div className="flex justify-between text-sm text-gray-500 mt-2">
+                            <div className="mt-2 flex justify-between text-xs text-gray-500 sm:text-sm">
                                 <span>$50</span>
                                 <span>$500</span>
                             </div>
@@ -243,16 +279,18 @@ const Hotels = () => {
 
 
                         {/* ================= RATING ================= */}
-                        <div className="mt-8">
 
-                            <h3 className="font-semibold mb-4">
+                        <div className="mt-7 sm:mt-8">
+
+                            <h3 className="mb-4 text-sm font-semibold sm:text-base">
                                 Guest Rating
                             </h3>
 
                             {[4, 4.5, 5].map((rating) => (
+
                                 <label
                                     key={rating}
-                                    className="flex items-center gap-3 mb-3 cursor-pointer"
+                                    className="mb-3 flex cursor-pointer items-center gap-3"
                                 >
 
                                     <input
@@ -262,33 +300,36 @@ const Hotels = () => {
                                         onChange={() =>
                                             setMinRating(rating)
                                         }
-                                        className="accent-blue-600"
+                                        className="h-4 w-4 accent-blue-600"
                                     />
 
-                                    <span className="text-gray-600">
+                                    <span className="text-sm text-gray-600">
                                         {rating}+ ⭐
                                     </span>
 
                                 </label>
+
                             ))}
 
-                            {/* Clear rating */}
                             {minRating > 0 && (
+
                                 <button
                                     onClick={() => setMinRating(0)}
                                     className="text-sm text-blue-600 hover:underline"
                                 >
                                     Clear rating
                                 </button>
+
                             )}
 
                         </div>
 
 
                         {/* ================= AMENITIES ================= */}
-                        <div className="mt-8">
 
-                            <h3 className="font-semibold mb-4">
+                        <div className="mt-7 sm:mt-8">
+
+                            <h3 className="mb-4 text-sm font-semibold sm:text-base">
                                 Amenities
                             </h3>
 
@@ -302,7 +343,7 @@ const Hotels = () => {
 
                                 <label
                                     key={amenity}
-                                    className="flex items-center gap-3 mb-3 cursor-pointer"
+                                    className="mb-3 flex cursor-pointer items-center gap-3"
                                 >
 
                                     <input
@@ -313,10 +354,10 @@ const Hotels = () => {
                                         onChange={() =>
                                             handleAmenityChange(amenity)
                                         }
-                                        className="w-4 h-4 accent-blue-600"
+                                        className="h-4 w-4 shrink-0 accent-blue-600"
                                     />
 
-                                    <span className="text-gray-600 text-sm">
+                                    <span className="text-sm text-gray-600">
                                         {amenity}
                                     </span>
 
@@ -330,18 +371,21 @@ const Hotels = () => {
 
 
                     {/* ================= RESULTS ================= */}
-                    <div className="flex-1">
+
+                    <div className="min-w-0 flex-1">
+
 
                         {/* Results Header */}
-                        <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 mb-6">
+
+                        <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
 
                             <div>
 
-                                <h2 className="text-2xl font-bold text-gray-800">
+                                <h2 className="text-xl font-bold text-gray-800 sm:text-2xl">
                                     Hotels
                                 </h2>
 
-                                <p className="text-gray-500 mt-1">
+                                <p className="mt-1 text-sm text-gray-500 sm:text-base">
                                     {sortedHotels.length} properties found
                                 </p>
 
@@ -349,14 +393,21 @@ const Hotels = () => {
 
 
                             {/* Sort */}
-                            <div className="relative">
+
+                            <div className="relative w-full sm:w-auto">
 
                                 <select
                                     value={sortBy}
                                     onChange={(e) =>
                                         setSortBy(e.target.value)
                                     }
-                                    className="appearance-none bg-white border border-gray-200 rounded-xl px-5 py-3 pr-10 outline-none focus:ring-2 focus:ring-blue-500"
+                                    className="
+                                        w-full appearance-none rounded-xl
+                                        border border-gray-200 bg-white
+                                        px-4 py-3 pr-10 text-sm outline-none
+                                        focus:ring-2 focus:ring-blue-500
+                                        sm:w-auto sm:min-w-[190px]
+                                    "
                                 >
 
                                     <option value="recommended">
@@ -379,7 +430,7 @@ const Hotels = () => {
 
                                 <ChevronDown
                                     size={18}
-                                    className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500"
+                                    className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"
                                 />
 
                             </div>
@@ -391,7 +442,7 @@ const Hotels = () => {
 
                         {sortedHotels.length > 0 ? (
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2">
 
                                 {sortedHotels.map((hotel) => (
 
@@ -407,19 +458,20 @@ const Hotels = () => {
                         ) : (
 
                             /* No hotels */
-                            <div className="bg-white rounded-2xl p-12 text-center">
 
-                                <h3 className="text-2xl font-bold text-gray-800">
+                            <div className="rounded-2xl bg-white p-8 text-center shadow-sm sm:p-12">
+
+                                <h3 className="text-xl font-bold text-gray-800 sm:text-2xl">
                                     No hotels found
                                 </h3>
 
-                                <p className="text-gray-500 mt-2">
+                                <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-gray-500 sm:text-base">
                                     Try changing your destination or filters.
                                 </p>
 
                                 <button
                                     onClick={clearFilters}
-                                    className="mt-5 bg-blue-600 text-white px-5 py-3 rounded-xl hover:bg-blue-700 transition"
+                                    className="mt-5 rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 sm:text-base"
                                 >
                                     Clear Filters
                                 </button>
