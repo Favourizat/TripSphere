@@ -18,7 +18,6 @@ import PopularDestinationDetails from "./pages/PopularDestinationDetails";
 import OurTeam from "./pages/OurTeam";
 import BookPackage from "./pages/BookPackage";
 import { Toaster } from "react-hot-toast";
-import Booktour from "./pages/Booktour";
 import Hotels from "./pages/Hotels";
 import Flights from "./pages/Flights";
 import FlightDetails from "./pages/FlightDetails";
@@ -97,10 +96,6 @@ function App() {
         <Route
           path="/book-package/:id"
           element={<BookPackage />}
-        />
-        <Route
-          path="/book-tour/:id"
-          element={<Booktour />}
         />
 
         <Route
