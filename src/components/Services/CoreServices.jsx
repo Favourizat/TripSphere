@@ -1,17 +1,8 @@
-import {
-  FaPlane,
-  FaHotel,
-  FaBus,
-  FaUmbrellaBeach,
-  FaCheck,
-  FaArrowRight,
-} from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
 
 import { services } from "../../constant/tourdata";
-
-
 
 const CoreServices = () => {
   return (
