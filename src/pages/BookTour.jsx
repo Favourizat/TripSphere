@@ -4,7 +4,7 @@ import { tourdata } from "../constant/tourdata";
 import BookingForm from "../components/BookingForm";
 import BookingSummary from "../components/BookingSummary";
 
-const BookT = () => {
+const BookTour = () => {
     const { id } = useParams();
 
     const tour = tourdata.find(
@@ -77,4 +77,4 @@ const BookT = () => {
     
 };
 
-export default BookT;
+export default BookTour;
